@@ -19,7 +19,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Print Filename
-        run: 'echo "File selected: ${{ github.event.client_paylod.text }}"'
+        run: 'echo "File selected: ${{ github.event.client_payload.filename }}"'
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     #- uses: actions/checkout@v2
 
