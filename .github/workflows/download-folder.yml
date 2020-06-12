@@ -27,7 +27,7 @@ jobs:
         run: 'echo "Folder selected: ${{ github.event.client_payload.foldername }}"'
       
       - name: Create Zip
-        run: zip -qq -r ${{ github.event.client_payload.foldername }}.zip ${{ github.event.client_payload.foldername }}
+        run: zip -r ${{ github.event.client_payload.foldername }}.zip ${{ github.event.client_payload.foldername }}
         
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     #- uses: actions/checkout@v2
