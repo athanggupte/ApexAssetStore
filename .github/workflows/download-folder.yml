@@ -21,7 +21,10 @@ jobs:
       - uses: actions/checkout@v2
         
       - name: Present Working Directory
-        run: ls
+        run: pwd && ls -l
+      
+      - name: Create Zip
+        run: zip -qq -r ./${{ github.event.client_payload.foldername }}-zip/${{ github.event.client_payload.foldername }}.zip ./${{ github.event.client_payload.foldername }}
         
       - name: Print Foldername
         run: 'echo "Folder selected: ${{ github.event.client_payload.foldername }}"'
