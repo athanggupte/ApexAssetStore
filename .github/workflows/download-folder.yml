@@ -18,10 +18,10 @@ jobs:
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v2
+         
       - name: Print Foldername
         run: 'echo "Folder selected: ${{ github.event.client_payload.foldername }}"'
-      
-      - uses: actions/checkout@v2
         
       - uses: montudor/action-zip@v0.1.0
         with:
