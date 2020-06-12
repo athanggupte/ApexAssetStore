@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Print Foldername
         run: 'echo "Folder selected: ${{ github.event.client_payload.foldername }}"'
+      
+      - uses: actions/checkout@v2
+        
       - uses: montudor/action-zip@v0.1.0
         with:
           args: zip -qq -r ./${{ github.event.client_payload.foldername }}-zip/${{ github.event.client_payload.foldername }}.zip ./${{ github.event.client_payload.foldername }}
